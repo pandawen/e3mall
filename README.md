@@ -1,4 +1,4 @@
-# e3mall
+# 分布式网上商城
 自己学习的网上商城
 
 开发环境： eclipse+maven+svn+linux+easyui
