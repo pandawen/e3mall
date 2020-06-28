@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>cn.e3mall</groupId>
+    <artifactId>e3-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>cn.e3mall</groupId>
+  <artifactId>e3-order</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>e3-order-service</module>
+  	<module>e3-order-interface</module>
+  </modules>
+ 	<dependencies>
+		<dependency>
+			<groupId>cn.e3mall</groupId>
+			<artifactId>e3-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<!-- 配置Tomcat插件 -->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<configuration>
+					<path>/</path>		<!-- 配置斜杠能够达到默认访问localhost:8080就可以访问项目的目的 -->
+					<port>8091</port>	<!-- 端口直接可以在这里进行修改 -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
